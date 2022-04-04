@@ -1,0 +1,44 @@
+{
+  "timeZone": "America/New_York",
+  "dependencies": {
+    "enabledAdvancedServices": [
+      {
+        "userSymbol": "Drive",
+        "version": "v2",
+        "serviceId": "drive"
+      }
+    ],
+    "libraries": [
+      {
+        "userSymbol": "GitHubAppToken",
+        "version": "0",
+        "libraryId": "1S3DNbJEq91TAWt753wnEnDtUNcnWWBVSUl7_mNiyzi1rc9BwButo07xl",
+        "developmentMode": true
+      }
+    ]
+  },
+  "exceptionLogging": "STACKDRIVER",
+  "oauthScopes": [
+    "https://www.googleapis.com/auth/drive.addons.metadata.readonly",
+    "https://www.googleapis.com/auth/script.locale",
+    "https://www.googleapis.com/auth/drive",
+    "https://www.googleapis.com/auth/script.external_request"
+  ],
+  "runtimeVersion": "V8",
+  "addOns": {
+    "common": {
+      "name": "Dispath with markdown cotent",
+      "logoUrl": "https://drive.google.com/uc?export=view&id=1-3GJHPRUFZ5CKrMgc3KYg2DVWU_ZwlDA",
+      "useLocaleFromApp": true,
+      "homepageTrigger": {
+        "runFunction": "onHomepage",
+        "enabled": true
+      }
+    },
+    "drive": {
+      "onItemsSelectedTrigger": {
+        "runFunction": "onDriveItemsSelected"
+      }
+    }
+  }
+}
